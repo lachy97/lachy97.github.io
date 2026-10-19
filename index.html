@@ -67,6 +67,11 @@ section{display:flex;flex-direction:column;gap:20px}
 .tag{font:500 12px var(--mono);padding:3px 9px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
 .note{font:400 12.5px var(--mono);color:var(--muted)}
 
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.card.featured{border-color:var(--accent)}
+.tag.live{color:var(--str);border-color:var(--str)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+
 /* experience timeline */
 .tl{display:flex;flex-direction:column;gap:0;border-left:1px solid var(--line);margin-left:6px}
 .item{position:relative;padding:0 0 24px 22px;min-width:0}
@@ -127,6 +132,16 @@ footer{font:400 12.5px var(--mono);color:var(--muted);border-top:1px solid var(-
   <section id="proyectos">
     <div class="sh"><span class="c">01</span><h2 data-i18n="h-proj">Proyectos</h2></div>
     <div class="proj">
+      <article class="card featured">
+        <div class="card-top"><h3>Ceiba Admin</h3><span class="tag live" data-i18n="live">Demo en vivo</span></div>
+        <div class="meta" data-i18n="p0m">Proyecto personal · Panel de administración de tienda online</div>
+        <p data-i18n="p0d">Panel completo para gestionar una tienda: indicadores con comparación entre períodos, gráfico de ingresos dibujado en SVG, productos con filtros y formulario validado, pedidos con su ciclo de estados y fichas de clientes. Incluye tema claro y oscuro, diseño responsive y tests unitarios.</p>
+        <div class="tags"><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span></div>
+        <div class="links">
+          <a class="btn primary" href="https://lachy97.github.io/ceiba-admin/" target="_blank" rel="noopener" data-i18n="demo">Ver demo</a>
+          <a class="btn" href="https://github.com/lachy97/ceiba-admin" target="_blank" rel="noopener" data-i18n="code">Ver código</a>
+        </div>
+      </article>
       <article class="card">
         <h3 data-i18n="p1t">Web administrativa para una aplicación móvil</h3>
         <div class="meta" data-i18n="p1m">Freelance · Desarrollador front end y Project Manager</div>
@@ -189,6 +204,9 @@ const EN = {
   status:"Available for remote work",
   lead:"I build clear, responsive and maintainable web interfaces. 4+ years building admin dashboards, websites and web apps, as a freelancer and in-house.",
   cta1:"Get in touch", "h-proj":"Projects", "h-exp":"Experience", "h-stack":"Tech stack", "h-contact":"Contact",
+  live:"Live demo", demo:"View demo", code:"View code",
+  p0m:"Personal project · Online store admin dashboard",
+  p0d:"A complete dashboard to run an online store: KPIs compared across periods, a hand-drawn SVG revenue chart, products with filters and a validated form, orders with a status workflow, and customer profiles. Light and dark themes, responsive layout and unit tests.",
   p1t:"Admin web app for a mobile application", p1m:"Freelance · Front end developer and Project Manager",
   p1d:"A web dashboard to manage the content, users and data of a mobile app. Besides building it, I lead the project: I plan features, set priorities and coordinate the team.",
   private:"Client's private code.",
